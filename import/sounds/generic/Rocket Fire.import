@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tank_fire_rocket.ogg-9d71ee72be3786dbec5f9edc6d7e7d92.oggstr"
+
+[deps]
+
+source_file="res://import/sounds/generic/tank_fire_rocket.ogg"
+dest_files=[ "res://.import/tank_fire_rocket.ogg-9d71ee72be3786dbec5f9edc6d7e7d92.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

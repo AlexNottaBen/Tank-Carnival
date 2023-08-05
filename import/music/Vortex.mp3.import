@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Vortex.mp3-e3bac6d3bc1863bfa685dd6dbf6ee1d9.mp3str"
+
+[deps]
+
+source_file="res://import/music/Vortex.mp3"
+dest_files=[ "res://.import/Vortex.mp3-e3bac6d3bc1863bfa685dd6dbf6ee1d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
