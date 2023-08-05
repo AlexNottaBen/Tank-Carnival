@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/Explostion Effect.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 1, 0.416016, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 0.258824, 0, 1 )
+albedo_texture = SubResource( 6 )
+
+[sub_resource type="SphereMesh" id=3]
+material = SubResource( 7 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.980539, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.533333, 1 )
+colors = PoolColorArray( 1, 0.328125, 0, 1, 1, 0.153125, 0, 1, 1, 0, 0, 1 )
+
+[node name="Explostion Effect" type="CPUParticles"]
+material_override = SubResource( 1 )
+material_overlay = SubResource( 2 )
+emitting = false
+amount = 15
+lifetime = 0.25
+one_shot = true
+explosiveness = 1.0
+mesh = SubResource( 3 )
+spread = 180.0
+initial_velocity = 20.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 1, 0, 0, 1 )
+color_initial_ramp = SubResource( 4 )
+script = ExtResource( 1 )

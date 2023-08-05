@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/BungeeInline/BungeeInline-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Settings Menu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/OpenSans/OpenSans-VariableFont.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Settings Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Name Label" type="RichTextLabel" parent="."]
+modulate = Color( 1, 0.521569, 0, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -289.0
+margin_top = 61.0
+margin_right = 300.0
+margin_bottom = 138.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Tank Carnival"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 28.0
+margin_top = 155.0
+margin_right = 328.0
+margin_bottom = 469.0
+
+[node name="Back Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 38.0
+margin_top = 521.0
+margin_right = 318.0
+margin_bottom = 579.0
+custom_fonts/font = SubResource( 1 )
+text = "Go Back"
+
+[node name="Sounds Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 94.0
+margin_top = 237.0
+margin_right = 309.0
+margin_bottom = 313.0
+custom_fonts/font = SubResource( 4 )
+pressed = true
+text = "Sounds"
+align = 2
+expand_icon = true
+
+[node name="Music Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 94.0
+margin_top = 165.0
+margin_right = 309.0
+margin_bottom = 241.0
+custom_fonts/font = SubResource( 4 )
+pressed = true
+text = "Music"
+align = 2
+expand_icon = true
+
+[node name="Shadows Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 94.0
+margin_top = 309.0
+margin_right = 309.0
+margin_bottom = 385.0
+custom_fonts/font = SubResource( 4 )
+pressed = true
+text = "Shadows"
+align = 2
+expand_icon = true
+
+[node name="Culling Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 36.0
+margin_top = 375.0
+margin_right = 309.0
+margin_bottom = 451.0
+custom_fonts/font = SubResource( 4 )
+text = "Entity Culling"
+align = 2
+expand_icon = true
+
+[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="toggled" from="Sounds Button" to="." method="_on_Sounds_Button_toggled"]
+[connection signal="toggled" from="Music Button" to="." method="_on_Music_Button_toggled"]
+[connection signal="toggled" from="Shadows Button" to="." method="_on_Shadows_Button_toggled"]
+[connection signal="toggled" from="Culling Button" to="." method="_on_Culling_Button_toggled"]

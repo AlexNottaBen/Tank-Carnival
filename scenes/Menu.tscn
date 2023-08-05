@@ -1,0 +1,261 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/Tree Model.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player Model.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Anti-tank hedgehog Model.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Main Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Difficulty Menu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Loading Screen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/About Screen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Settings Menu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/Menu BackGround.gd" type="Script" id=9]
+[ext_resource path="res://scenes/Bush Model.tscn" type="PackedScene" id=10]
+[ext_resource path="res://import/sounds/generic/Click.ogg" type="AudioStream" id=11]
+[ext_resource path="res://import/music/Vortex.mp3" type="AudioStream" id=12]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0588235, 0.415686, 0.0196078, 1 )
+
+[node name="Menu" type="Spatial"]
+
+[node name="Menu BackGround" type="Spatial" parent="."]
+script = ExtResource( 9 )
+
+[node name="Tree Model" parent="Menu BackGround" instance=ExtResource( 1 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13.7178, 0, 1.62874 )
+
+[node name="Tree Model2" parent="Menu BackGround" instance=ExtResource( 1 )]
+transform = Transform( -0.00104373, 0, -0.00692175, 0, 0.007, 0, 0.00692175, 0, -0.00104373, -6.69837, 0, -0.613963 )
+
+[node name="Tree Model4" parent="Menu BackGround" instance=ExtResource( 1 )]
+transform = Transform( 0.00783921, 0, -0.0062086, 0, 0.01, 0, 0.0062086, 0, 0.00783921, -2.40365, -0.17696, -6.16265 )
+
+[node name="Tree Model3" parent="Menu BackGround" instance=ExtResource( 1 )]
+transform = Transform( 0.00181044, 0, 0.00676183, 0, 0.007, 0, -0.00676183, 0, 0.00181044, -11.6294, 0, 8.66018 )
+
+[node name="Player Model" parent="Menu BackGround" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0215316, 3.30882 )
+
+[node name="Ground" type="MeshInstance" parent="Menu BackGround"]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 18, -7.26566, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="Menu BackGround"]
+transform = Transform( 0.504934, 0, 0.863158, 0, 1, 0, -0.863158, 0, 0.504934, 3.00036, 1.95901, 9.24476 )
+current = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Menu BackGround"]
+transform = Transform( 1, 0, 0, 0, -0.694194, 0.719788, 0, -0.719788, -0.694194, 0, 5.05879, 0 )
+shadow_enabled = true
+
+[node name="Anti-tank hedgehogs Model" parent="Menu BackGround" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15873, 0, 6.06812 )
+
+[node name="Anti-tank hedgehogs Model2" parent="Menu BackGround" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7228, 0, 11.7544 )
+
+[node name="Anti-tank hedgehogs Model3" parent="Menu BackGround" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01901, 0, 6.69364 )
+
+[node name="Anti-tank hedgehogs Model4" parent="Menu BackGround" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.25613, 0, 7.67443 )
+
+[node name="Bushes" type="Spatial" parent="Menu BackGround"]
+
+[node name="Bush Model" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.02468, 0, -13.8051 )
+
+[node name="Bush Model2" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -2.91465, 0, -12.7892 )
+
+[node name="Bush Model3" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -4.92641, 0, -11.4474 )
+
+[node name="Bush Model4" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -6.70869, 0, -10.2625 )
+
+[node name="Bush Model5" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.30141, 0, -8.80838 )
+
+[node name="Bush Model6" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9.49734, 0, -7.70497 )
+
+[node name="Bush Model7" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -10.8246, 0, -6.52482 )
+
+[node name="Bush Model8" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -11.8164, 0, -5.31084 )
+
+[node name="Bush Model9" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.7183, 0, -4.20605 )
+
+[node name="Bush Model10" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13.5221, 0, -3.09811 )
+
+[node name="Bush Model11" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -14.5741, 0, -1.72081 )
+
+[node name="Bush Model12" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -15.423, 0, -0.267417 )
+
+[node name="Bush Model13" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.0503, 0, 1.18883 )
+
+[node name="Bush Model14" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 2.96248 )
+
+[node name="Bush Model15" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 4.93069 )
+
+[node name="Bush Model16" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 6.8253 )
+
+[node name="Bush Model17" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 9.10424 )
+
+[node name="Bush Model18" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 11.3194 )
+
+[node name="Bush Model19" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 13.2048 )
+
+[node name="Bush Model20" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 14.9572 )
+
+[node name="Bush Model21" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 16.8169 )
+
+[node name="Bush Model22" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.775902, 0, -13.8051 )
+
+[node name="Bush Model23" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2.61252, 0, -13.8051 )
+
+[node name="Bush Model24" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2.61252, 1.13586, -15.4899 )
+
+[node name="Bush Model25" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.760301, 1.13586, -15.4899 )
+
+[node name="Bush Model26" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.19321, 1.13586, -15.4899 )
+
+[node name="Bush Model27" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 4.4958, 1.13586, -15.4899 )
+
+[node name="Bush Model28" parent="Menu BackGround/Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 4.06546, -0.0799427, -14.4538 )
+
+[node name="Bushes2" type="Spatial" parent="Menu BackGround"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.932856, 1.16069, 0 )
+
+[node name="Bush Model" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.02468, 0, -13.8051 )
+
+[node name="Bush Model2" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -2.91465, 0, -12.7892 )
+
+[node name="Bush Model3" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -4.92641, 0, -11.4474 )
+
+[node name="Bush Model4" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -6.70869, 0, -10.2625 )
+
+[node name="Bush Model5" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.30141, 0, -8.80838 )
+
+[node name="Bush Model6" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9.49734, 0, -7.70497 )
+
+[node name="Bush Model7" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -10.8246, 0, -6.52482 )
+
+[node name="Bush Model8" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -11.8164, 0, -5.31084 )
+
+[node name="Bush Model9" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.7183, 0, -4.20605 )
+
+[node name="Bush Model10" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13.5221, 0, -3.09811 )
+
+[node name="Bush Model11" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -14.5741, 0, -1.72081 )
+
+[node name="Bush Model12" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -15.423, 0, -0.267417 )
+
+[node name="Bush Model13" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.0503, 0, 1.18883 )
+
+[node name="Bush Model14" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 2.96248 )
+
+[node name="Bush Model15" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 4.93069 )
+
+[node name="Bush Model16" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 6.8253 )
+
+[node name="Bush Model17" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 9.10424 )
+
+[node name="Bush Model18" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 11.3194 )
+
+[node name="Bush Model19" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 13.2048 )
+
+[node name="Bush Model20" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 14.9572 )
+
+[node name="Bush Model21" parent="Menu BackGround/Bushes2" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -16.619, 0, 16.8169 )
+
+[node name="Front Bushes" type="Spatial" parent="Menu BackGround"]
+
+[node name="Bush Model" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -4.25601, 0, 4.24075 )
+
+[node name="Bush Model2" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.76506, 0, -2.02714 )
+
+[node name="Bush Model3" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -10.6164, 0, 5.11981 )
+
+[node name="Bush Model4" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -10.774, 0, 1.05044 )
+
+[node name="Bush Model5" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.07924, 0, -3.82217 )
+
+[node name="Bush Model6" parent="Menu BackGround/Front Bushes" instance=ExtResource( 10 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -10.7096, -4.76837e-07, 15.5441 )
+
+[node name="Main Menu" parent="." instance=ExtResource( 4 )]
+
+[node name="Difficulty Menu" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Loading Screen" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Settings Menu" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="About Screen" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Sounds" type="Spatial" parent="."]
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 11 )
+
+[node name="Music" type="Spatial" parent="."]
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 12 )

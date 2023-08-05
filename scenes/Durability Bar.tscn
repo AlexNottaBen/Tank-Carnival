@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/bar/Full Bar.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Durability Bar.gd" type="Script" id=2]
+[ext_resource path="res://sprites/bar/50 Percent Bar.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bar/10 Percent Bar.png" type="Texture" id=4]
+[ext_resource path="res://sprites/bar/25 Percent Bar.png" type="Texture" id=5]
+[ext_resource path="res://sprites/bar/75 Percent Bar.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "25",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "50",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "75",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Full",
+"speed": 5.0
+} ]
+
+[node name="Durability Bar" type="AnimatedSprite3D"]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0 )
+billboard = 1
+frames = SubResource( 1 )
+animation = "Full"
+script = ExtResource( 2 )

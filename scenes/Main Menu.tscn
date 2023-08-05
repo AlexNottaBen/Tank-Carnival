@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/BungeeInline/BungeeInline-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Main Menu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/OpenSans/OpenSans-VariableFont.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 3 )
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Name Label" type="RichTextLabel" parent="."]
+modulate = Color( 1, 0.521569, 0, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -289.0
+margin_top = 61.0
+margin_right = 283.0
+margin_bottom = 138.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Tank Carnival"
+
+[node name="Start Game Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 38.0
+margin_top = 255.0
+margin_right = 318.0
+margin_bottom = 313.0
+custom_fonts/font = SubResource( 1 )
+text = "Start Game"
+
+[node name="Settings Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 38.0
+margin_top = 335.0
+margin_right = 318.0
+margin_bottom = 393.0
+custom_fonts/font = SubResource( 1 )
+text = "Settings"
+
+[node name="About Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 38.0
+margin_top = 414.0
+margin_right = 318.0
+margin_bottom = 472.0
+custom_fonts/font = SubResource( 1 )
+text = "About"
+
+[node name="Exit Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 38.0
+margin_top = 490.0
+margin_right = 318.0
+margin_bottom = 548.0
+custom_fonts/font = SubResource( 1 )
+text = "Exit"
+
+[connection signal="pressed" from="Start Game Button" to="." method="_on_Start_Game_Button_pressed"]
+[connection signal="pressed" from="Settings Button" to="." method="_on_Settings_Button_pressed"]
+[connection signal="pressed" from="About Button" to="." method="_on_About_Button_pressed"]
+[connection signal="pressed" from="Exit Button" to="." method="_on_Exit_Button_pressed"]

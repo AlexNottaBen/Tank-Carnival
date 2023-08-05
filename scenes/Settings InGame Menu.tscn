@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/BungeeInline/BungeeInline-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Settings InGame Menu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/OpenSans/OpenSans-VariableFont.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Settings InGame Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Name Label" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -289.0
+margin_top = 61.0
+margin_right = 283.0
+margin_bottom = 138.0
+custom_fonts/normal_font = SubResource( 6 )
+text = "Tank Carnival"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -148.5
+margin_right = 150.0
+margin_bottom = 148.5
+
+[node name="Back Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -140.0
+margin_top = -109.0
+margin_right = 140.0
+margin_bottom = -51.0
+custom_fonts/font = SubResource( 1 )
+text = "Go Back"
+
+[node name="Shadows Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 32.0
+margin_right = 103.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 4 )
+pressed = true
+text = "Shadows"
+align = 2
+expand_icon = true
+
+[node name="Sounds Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -39.0
+margin_right = 103.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 5 )
+pressed = true
+text = "Sounds"
+align = 2
+expand_icon = true
+
+[node name="Music Button" type="CheckButton" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -113.0
+margin_right = 103.0
+margin_bottom = -37.0
+custom_fonts/font = SubResource( 5 )
+pressed = true
+text = "Music"
+align = 2
+expand_icon = true
+
+[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="toggled" from="Shadows Button" to="." method="_on_Shadows_Button_toggled"]
+[connection signal="toggled" from="Sounds Button" to="." method="_on_Sounds_Button_toggled"]
+[connection signal="toggled" from="Music Button" to="." method="_on_Music_Button_toggled"]

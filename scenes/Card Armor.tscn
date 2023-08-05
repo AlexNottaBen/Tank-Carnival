@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/OpenSans/OpenSans-VariableFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://images/Tank Armor.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Card Armor.gd" type="Script" id=3]
+[ext_resource path="res://images/Arrow Up Icon.png" type="Texture" id=4]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="Card Armor" type="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -155.0
+margin_top = -219.0
+margin_right = 93.0
+margin_bottom = 131.4
+rect_pivot_offset = Vector2( -548, 116 )
+theme = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Images" type="TextureRect" parent="."]
+margin_left = 26.0
+margin_top = 24.0
+margin_right = 223.6
+margin_bottom = 198.4
+rect_pivot_offset = Vector2( 410, 138 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_left = 162.0
+margin_top = 124.0
+margin_right = 763.0
+margin_bottom = 844.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="Name Label" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.5
+margin_top = 13.5
+margin_right = 114.5
+margin_bottom = 60.5
+custom_fonts/normal_font = SubResource( 2 )
+text = "Improve Armor"
+
+[node name="Description Label" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = 61.8
+margin_right = 114.0
+margin_bottom = 166.8
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center] Increases durability per 250 units. [/center]"
+text = " Increases durability per 250 units. "
+
+[connection signal="pressed" from="." to="." method="_on_Card_Armor_pressed"]

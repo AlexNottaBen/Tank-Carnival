@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/Mobile Control.gd" type="Script" id=1]
+[ext_resource path="res://import/UI/Left.png" type="Texture" id=2]
+[ext_resource path="res://import/UI/Up.png" type="Texture" id=3]
+[ext_resource path="res://import/UI/Action.png" type="Texture" id=4]
+[ext_resource path="res://import/UI/Menu.png" type="Texture" id=5]
+[ext_resource path="res://import/UI/Right.png" type="Texture" id=6]
+[ext_resource path="res://import/UI/Down.png" type="Texture" id=7]
+
+[node name="Mobile Control" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Move Buttons" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Move Up Button" type="TouchScreenButton" parent="Move Buttons"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( 98, -156.5 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 3 )
+passby_press = true
+action = "Up"
+
+[node name="Move Down Button" type="TouchScreenButton" parent="Move Buttons"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( 98, -72.5 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 7 )
+passby_press = true
+action = "Down"
+
+[node name="Move Left Button" type="TouchScreenButton" parent="Move Buttons"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( 14, -72.5 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 2 )
+passby_press = true
+action = "Left"
+
+[node name="Move Right Button" type="TouchScreenButton" parent="Move Buttons"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( 182, -72.5 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 6 )
+passby_press = true
+action = "Right"
+
+[node name="Menu Button" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Menu Button" type="TouchScreenButton" parent="Menu Button"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( -28.5, -30 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
+passby_press = true
+action = "ui_cancel"
+
+[node name="Action Button" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+
+[node name="Action Button" type="TouchScreenButton" parent="Action Button"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( -168, -161 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+passby_press = true
+action = "Fire"

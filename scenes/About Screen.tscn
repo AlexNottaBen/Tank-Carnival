@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/BungeeInline/BungeeInline-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/About Screen.gd" type="Script" id=2]
+[ext_resource path="res://fonts/OpenSans/OpenSans-VariableFont.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[node name="About Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Name Label" type="RichTextLabel" parent="."]
+modulate = Color( 1, 0.521569, 0, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -289.0
+margin_top = 61.0
+margin_right = 283.0
+margin_bottom = 138.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Tank Carnival"
+
+[node name="Back Button" type="Button" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = -70.0
+margin_right = 298.0
+margin_bottom = -12.0
+custom_fonts/font = SubResource( 1 )
+text = "Go Back"
+
+[node name="Credits Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 0, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 21.0
+margin_top = -163.0
+margin_right = 655.0
+margin_bottom = 214.0
+
+[node name="Credits Text" type="RichTextLabel" parent="Credits Panel"]
+margin_left = 15.0
+margin_top = 2.0
+margin_right = 633.0
+margin_bottom = 376.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "
+Credits:
+
+Game Development:
+- Alexander Serhiienko (alies AlexNottaBen) (https://github.com/AlexNottaBen/)
+
+3D Models:
+- Mechs, tanks, vehicles, and tripods by Vetech82 (https://sketchfab.com/Vetech82)
+- HCR2 Tank by oakar258 (https://sketchfab.com/oakar258)
+- RocketLowPoly by TimonPokemon (https://sketchfab.com/TimonPokemon)
+- LowPoly Tree by joeantani (https://sketchfab.com/joeantani)
+  - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+
+Sprites & UI:
+- Particle Pack by Kenney (https://www.kenney.nl/assets/particle-pack)
+- Onscreen Controls by Kenney (https://www.kenney.nl/assets/onscreen-controls)
+  - License: CC-0 (https://creativecommons.org/share-your-work/public-domain/cc0/)
+
+Music & Sound Effects:
+- \"Vortex\" Kevin MacLeod (incompetech.com)
+  - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+- Sound Effects: freesound.org
+  - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+
+Fonts:
+- Open Sans by The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+- BungeeInline by The Bungee Project Authors (david@djr.com)
+  - License: SIL Open Font License, Version 1.1 (https://opensource.org/license/ofl-1-1/)
+
+Open Source Libraries:
+- Godot Engine (https://godotengine.org/)
+- Tween (https://github.com/godotengine/godot-tween)
+
+Special Thanks:
+- The Godot community for providing help and resources.
+
+License:
+- This game is released under the GNU GPL version 3 or later. You can find the full source code and licensing information on the GitHub repository (https://github.com/AlexNottaBen/).
+
+"
+
+[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]

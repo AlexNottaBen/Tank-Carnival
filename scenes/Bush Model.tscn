@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://import/tree/scene.gltf" type="PackedScene" id=1]
+
+[node name="Bush Model" instance=ExtResource( 1 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+
+[node name="piccolo_1_Chiome_0" parent="Sketchfab_model/14d63ffa2ed24f89bb3857d2b0449b25fbx/RootNode/Albero_1/piccolo_1" index="0"]
+visible = false
+
+[node name="piccolo_Chiome_0" parent="Sketchfab_model/14d63ffa2ed24f89bb3857d2b0449b25fbx/RootNode/Albero_1/piccolo" index="0"]
+visible = false
+
+[node name="piccolo2_Chiome_0" parent="Sketchfab_model/14d63ffa2ed24f89bb3857d2b0449b25fbx/RootNode/Albero_1/piccolo2" index="0"]
+transform = Transform( 0.5, 0, -1.49012e-08, 0, 0.5, 0, 1.49012e-08, 0, 0.5, 153.464, -806.866, 129.089 )
+
+[node name="Cylinder_Legno_0" parent="Sketchfab_model/14d63ffa2ed24f89bb3857d2b0449b25fbx/RootNode/Albero_1/Cylinder" index="0"]
+visible = false

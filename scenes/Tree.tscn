@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Tree Model.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Tree.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Culling.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.6, 1, 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fall Down"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Tree Model:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 75, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Tree Model:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Tree" type="StaticBody"]
+script = ExtResource( 2 )
+
+[node name="Tree Model" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 0, 0, 0 )
+
+[node name="Culling" parent="Tree Model" instance=ExtResource( 3 )]
+transform = Transform( 333.333, 0, 0, 0, 333.333, 0, 0, 0, 333.333, -166.366, 942.513, 1747.04 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.25, 0, 0, 0, 1.25, 0, 0, 0, 0.25, 0.0443782, 1.05577, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Fall Down" = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572531, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 0.3, 0, 0, 0, 1.25, 0, 0, 0, 0.3, 0.0443782, 1.05577, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
