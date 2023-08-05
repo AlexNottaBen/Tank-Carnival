@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Vehicle1 Model.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Durability Bar.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=3]
+
+[node name="Enemy" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.8, 0, 0, 0, 0.6, 0, 0, 0, 0.8, 0, 0.430199, 0 )
+shape = SubResource( 1 )
+
+[node name="Vehicle1 Model" parent="CollisionShape" instance=ExtResource( 2 )]
+transform = Transform( -0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 0, -1.11365, 0 )
+
+[node name="Firepoint" type="Spatial" parent="CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0277926, 0.333463, -1.39757 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape/Firepoint"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0.157259 )
+visible = false
+material_overlay = SubResource( 2 )
+mesh = SubResource( 3 )
+
+[node name="Durability Bar" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.5, 0 )
+
+[node name="DirectionTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_DirectionTimer_timeout"]
