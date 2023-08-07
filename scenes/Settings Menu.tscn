@@ -9,12 +9,12 @@ size = 64
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 33
-font_data = ExtResource( 3 )
-
 [sub_resource type="DynamicFont" id=4]
 size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
 font_data = ExtResource( 3 )
 
 [node name="Settings Menu" type="Control"]
@@ -40,64 +40,64 @@ margin_top = 155.0
 margin_right = 328.0
 margin_bottom = 469.0
 
-[node name="Back Button" type="Button" parent="."]
+[node name="Sounds Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
-margin_left = 38.0
-margin_top = 521.0
-margin_right = 318.0
-margin_bottom = 579.0
-custom_fonts/font = SubResource( 1 )
-text = "Go Back"
-
-[node name="Sounds Button" type="CheckButton" parent="."]
-modulate = Color( 1, 1, 0, 1 )
-margin_left = 94.0
-margin_top = 237.0
-margin_right = 309.0
-margin_bottom = 313.0
+margin_left = 66.0
+margin_top = 82.0
+margin_right = 281.0
+margin_bottom = 158.0
 custom_fonts/font = SubResource( 4 )
 pressed = true
 text = "Sounds"
 align = 2
 expand_icon = true
 
-[node name="Music Button" type="CheckButton" parent="."]
+[node name="Music Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
-margin_left = 94.0
-margin_top = 165.0
-margin_right = 309.0
-margin_bottom = 241.0
+margin_left = 66.0
+margin_top = 10.0
+margin_right = 281.0
+margin_bottom = 86.0
 custom_fonts/font = SubResource( 4 )
 pressed = true
 text = "Music"
 align = 2
 expand_icon = true
 
-[node name="Shadows Button" type="CheckButton" parent="."]
+[node name="Shadows Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
-margin_left = 94.0
-margin_top = 309.0
-margin_right = 309.0
-margin_bottom = 385.0
+margin_left = 66.0
+margin_top = 154.0
+margin_right = 281.0
+margin_bottom = 230.0
 custom_fonts/font = SubResource( 4 )
 pressed = true
 text = "Shadows"
 align = 2
 expand_icon = true
 
-[node name="Culling Button" type="CheckButton" parent="."]
+[node name="Culling Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
-margin_left = 36.0
-margin_top = 375.0
-margin_right = 309.0
-margin_bottom = 451.0
+margin_left = 8.0
+margin_top = 220.0
+margin_right = 281.0
+margin_bottom = 296.0
 custom_fonts/font = SubResource( 4 )
 text = "Entity Culling"
 align = 2
 expand_icon = true
 
-[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]
-[connection signal="toggled" from="Sounds Button" to="." method="_on_Sounds_Button_toggled"]
-[connection signal="toggled" from="Music Button" to="." method="_on_Music_Button_toggled"]
-[connection signal="toggled" from="Shadows Button" to="." method="_on_Shadows_Button_toggled"]
-[connection signal="toggled" from="Culling Button" to="." method="_on_Culling_Button_toggled"]
+[node name="Back Button" type="Button" parent="Panel"]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 10.0
+margin_top = 366.0
+margin_right = 290.0
+margin_bottom = 424.0
+custom_fonts/font = SubResource( 1 )
+text = "Go Back"
+
+[connection signal="toggled" from="Panel/Sounds Button" to="." method="_on_Sounds_Button_toggled"]
+[connection signal="toggled" from="Panel/Music Button" to="." method="_on_Music_Button_toggled"]
+[connection signal="toggled" from="Panel/Shadows Button" to="." method="_on_Shadows_Button_toggled"]
+[connection signal="toggled" from="Panel/Culling Button" to="." method="_on_Culling_Button_toggled"]
+[connection signal="pressed" from="Panel/Back Button" to="." method="_on_Back_Button_pressed"]

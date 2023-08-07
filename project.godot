@@ -17,7 +17,7 @@ boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.124065, 0.129913, 0.144531, 1 )
 config/icon="res://Icon.png"
 config/macos_native_icon="res://Icon.png"
-config/windows_native_icon="res://Icon.png"
+config/windows_native_icon="res://images/Icon.ico"
 
 [autoload]
 
@@ -26,6 +26,7 @@ settings="*res://scripts/Settings.gd"
 
 [display]
 
+window/size/width=1280
 window/size/height=768
 window/size/resizable=false
 window/size/fullscreen=true
@@ -34,7 +35,7 @@ window/size/fullscreen=true
 
 expo=false
 export=true
-icon=false
+icon=true
 full=false
 emulate=false
 emula=false

@@ -1,7 +1,7 @@
 extends Spatial
 
 export var number_of_enemies = 5
-export var square_size = 70
+export var square_size = 55
 export var enemy_scene = preload("res://scenes/Enemy.tscn")
 export var enemy2_scene = preload("res://scenes/Enemy 2.tscn")
 export var enemy3_scene = preload("res://scenes/Enemy 3.tscn")

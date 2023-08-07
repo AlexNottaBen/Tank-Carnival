@@ -2,10 +2,16 @@ extends Control
 
 
 func _ready():
-	$"Sounds Button".pressed = settings.sounds_enabled
-	$"Music Button".pressed = settings.music_enabled
-	$"Shadows Button".pressed = settings.shadow_enabled
+	$"Panel/Sounds Button".pressed = settings.sounds_enabled
+	$"Panel/Music Button".pressed = settings.music_enabled
+	$"Panel/Shadows Button".pressed = settings.shadow_enabled
 
+	if settings.is_mobile:
+		$"Name Label".rect_scale = Vector2(2, 2)
+		$"Name Label".rect_position.x -= 250
+		$Panel.rect_scale = Vector2(2, 2)
+		$Panel.rect_position.y -= 100
+		$Panel.rect_position.x -= 125
 
 func _on_Back_Button_pressed():
 	if settings.sounds_enabled:

@@ -16,7 +16,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -40.0
 margin_right = 40.0
-rect_scale = Vector2( 2, 2 )
+rect_scale = Vector2( 2.5, 2.5 )
 
 [node name="Move Up Button" type="TouchScreenButton" parent="Move Buttons"]
 modulate = Color( 1, 1, 1, 0.498039 )
@@ -58,11 +58,11 @@ anchor_bottom = 0.5
 margin_left = -40.0
 margin_top = -20.0
 margin_bottom = 20.0
-rect_scale = Vector2( 2, 2 )
+rect_scale = Vector2( 2.5, 2.5 )
 
 [node name="Menu Button" type="TouchScreenButton" parent="Menu Button"]
 modulate = Color( 1, 1, 1, 0.498039 )
-position = Vector2( -28.5, -30 )
+position = Vector2( -33.7, -30 )
 normal = ExtResource( 5 )
 pressed = ExtResource( 5 )
 passby_press = true
@@ -78,8 +78,8 @@ margin_top = -40.0
 
 [node name="Action Button" type="TouchScreenButton" parent="Action Button"]
 modulate = Color( 1, 1, 1, 0.498039 )
-position = Vector2( -168, -161 )
-scale = Vector2( 2, 2 )
+position = Vector2( -220, -220 )
+scale = Vector2( 2.5, 2.5 )
 normal = ExtResource( 4 )
 pressed = ExtResource( 4 )
 passby_press = true

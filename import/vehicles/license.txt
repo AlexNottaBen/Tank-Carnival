@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mechs, tanks, vehicles and tripods
+* source:	https://sketchfab.com/3d-models/mechs-tanks-vehicles-and-tripods-4af2f216fad542c8b957b7e643049dbe
+* author:	Vetech82 (https://sketchfab.com/Vetech82)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mechs, tanks, vehicles and tripods" (https://sketchfab.com/3d-models/mechs-tanks-vehicles-and-tripods-4af2f216fad542c8b957b7e643049dbe) by Vetech82 (https://sketchfab.com/Vetech82) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

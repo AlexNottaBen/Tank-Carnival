@@ -165,6 +165,7 @@ func _process(delta):
 			$CollisionShape/RocketLauncher2.visible = true
 			
 		if Input.is_action_pressed("Enter"):
+			durability = 0
 			destroy()
 
 		Velocity.y = -9.8

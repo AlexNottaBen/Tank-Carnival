@@ -9,11 +9,12 @@ size = 64
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 33
+[sub_resource type="DynamicFont" id=3]
+size = 24
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
+size = 33
 font_data = ExtResource( 3 )
 
 [node name="About Screen" type="Control"]
@@ -32,31 +33,20 @@ margin_bottom = 138.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Tank Carnival"
 
-[node name="Back Button" type="Button" parent="."]
-modulate = Color( 1, 1, 0, 1 )
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 18.0
-margin_top = -70.0
-margin_right = 298.0
-margin_bottom = -12.0
-custom_fonts/font = SubResource( 1 )
-text = "Go Back"
-
 [node name="Credits Panel" type="Panel" parent="."]
 modulate = Color( 1, 1, 0, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 21.0
-margin_top = -163.0
-margin_right = 655.0
-margin_bottom = 214.0
+margin_top = -242.0
+margin_right = 1009.0
+margin_bottom = 300.0
 
 [node name="Credits Text" type="RichTextLabel" parent="Credits Panel"]
 margin_left = 15.0
 margin_top = 2.0
-margin_right = 633.0
-margin_bottom = 376.0
+margin_right = 985.0
+margin_bottom = 539.0
 custom_fonts/normal_font = SubResource( 3 )
 text = "
 Credits:
@@ -79,8 +69,12 @@ Sprites & UI:
 Music & Sound Effects:
 - \"Vortex\" Kevin MacLeod (incompetech.com)
   - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+- \"QmYaan\" Grand Beats (http://www.grandbeats.com/)
+  - License: CC-BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 - Sound Effects: freesound.org
-  - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+  - License: CC-0 (https://creativecommons.org/share-your-work/public-domain/cc0/)
+- \"Hitting a tin can\" ryanconway (https://freesound.org/people/ryanconway/)
+  - License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
 
 Fonts:
 - Open Sans by The Open Sans Project Authors (https://github.com/googlefonts/opensans)
@@ -95,8 +89,19 @@ Special Thanks:
 - The Godot community for providing help and resources.
 
 License:
-- This game is released under the GNU GPL version 3 or later. You can find the full source code and licensing information on the GitHub repository (https://github.com/AlexNottaBen/).
+- This game is released under the GNU GPL version 3 or later. You can find the full source code and licensing information on the GitHub repository (https://github.com/AlexNottaBen/Tank-Carnival/).
 
 "
 
-[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]
+[node name="Back Button" type="Button" parent="Credits Panel"]
+modulate = Color( 1, 1, 0, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = 14.0
+margin_right = 277.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+text = "Go Back"
+
+[connection signal="pressed" from="Credits Panel/Back Button" to="." method="_on_Back_Button_pressed"]

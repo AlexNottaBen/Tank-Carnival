@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/soundtrack_1.ogg-da43feaf1a402a10407e27b34a884eb0.oggstr"
+
+[deps]
+
+source_file="res://import/music/QmYaan (Grand Beats)/soundtrack_1.ogg"
+dest_files=[ "res://.import/soundtrack_1.ogg-da43feaf1a402a10407e27b34a884eb0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

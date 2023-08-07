@@ -42,7 +42,7 @@ func toggle_pause():
 			$"Settings InGame Menu".hide()
 			$"Card Selection".hide()
 			$UI.visible = true
-			
+
 func play_bonus_take_sound():
 	$Sounds/BonusTakeSound.play()
 

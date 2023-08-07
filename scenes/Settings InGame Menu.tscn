@@ -43,25 +43,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -150.0
-margin_top = -148.5
-margin_right = 150.0
-margin_bottom = 148.5
+margin_left = -154.0
+margin_top = -234.0
+margin_right = 146.0
+margin_bottom = 63.0
 
-[node name="Back Button" type="Button" parent="."]
+[node name="Back Button" type="Button" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -140.0
-margin_top = -109.0
-margin_right = 140.0
-margin_bottom = -51.0
+margin_left = -138.0
+margin_top = 30.0
+margin_right = 142.0
+margin_bottom = 88.0
 custom_fonts/font = SubResource( 1 )
 text = "Go Back"
 
-[node name="Shadows Button" type="CheckButton" parent="."]
+[node name="Shadows Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -77,7 +77,7 @@ text = "Shadows"
 align = 2
 expand_icon = true
 
-[node name="Sounds Button" type="CheckButton" parent="."]
+[node name="Sounds Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -93,7 +93,7 @@ text = "Sounds"
 align = 2
 expand_icon = true
 
-[node name="Music Button" type="CheckButton" parent="."]
+[node name="Music Button" type="CheckButton" parent="Panel"]
 modulate = Color( 1, 1, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -109,7 +109,7 @@ text = "Music"
 align = 2
 expand_icon = true
 
-[connection signal="pressed" from="Back Button" to="." method="_on_Back_Button_pressed"]
-[connection signal="toggled" from="Shadows Button" to="." method="_on_Shadows_Button_toggled"]
-[connection signal="toggled" from="Sounds Button" to="." method="_on_Sounds_Button_toggled"]
-[connection signal="toggled" from="Music Button" to="." method="_on_Music_Button_toggled"]
+[connection signal="pressed" from="Panel/Back Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="toggled" from="Panel/Shadows Button" to="." method="_on_Shadows_Button_toggled"]
+[connection signal="toggled" from="Panel/Sounds Button" to="." method="_on_Sounds_Button_toggled"]
+[connection signal="toggled" from="Panel/Music Button" to="." method="_on_Music_Button_toggled"]

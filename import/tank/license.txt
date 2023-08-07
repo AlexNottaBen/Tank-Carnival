@@ -1,0 +1,11 @@
+Model Information:
+* title:	HCR2 Tank
+* source:	https://sketchfab.com/3d-models/hcr2-tank-7d25a2554ef744e6a002fa20dc0ea706
+* author:	oakar258 (https://sketchfab.com/oakar258)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HCR2 Tank" (https://sketchfab.com/3d-models/hcr2-tank-7d25a2554ef744e6a002fa20dc0ea706) by oakar258 (https://sketchfab.com/oakar258) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

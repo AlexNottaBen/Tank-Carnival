@@ -39,7 +39,7 @@ transform = Transform( 0.00181044, 0, 0.00676183, 0, 0.007, 0, -0.00676183, 0, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0215316, 3.30882 )
 
 [node name="Ground" type="MeshInstance" parent="Menu BackGround"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 18, -7.26566, 0, 0 )
+transform = Transform( 13.5968, 0, 0, 0, 1, 0, 0, 0, 18, -7.26566, 0, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 2 )

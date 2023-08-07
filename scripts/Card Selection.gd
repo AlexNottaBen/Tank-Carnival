@@ -11,6 +11,10 @@ const card_rocket_scene = preload("res://scenes/Card Rocket.tscn")
 var deck = [card_speed_scene, card_repair_scene, card_armor_scene, card_damage_scene, card_reload_scene, card_gun_scene, card_rocket_scene]
 
 func _ready():
+	
+	if settings.is_mobile:
+		$"Text Label".rect_position.y += 65
+	
 	randomize()
 	deck.shuffle()
 	var number_of_guns = get_node("../Player").number_of_guns

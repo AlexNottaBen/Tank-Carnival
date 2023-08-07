@@ -1,5 +1,12 @@
 extends Control
 
+func _ready():
+	if settings.is_mobile:
+		$"Name Label".rect_scale = Vector2(2, 2)
+		$"Name Label".rect_position.x -= 250
+		$VBoxContainer.rect_scale = Vector2(2, 2)
+		$VBoxContainer.rect_position.y -= 200
+		$VBoxContainer.rect_position.x -= 200
 
 func _on_Continue_Button_pressed():
 	if settings.sounds_enabled:

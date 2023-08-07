@@ -5,10 +5,14 @@ func _ready():
 	if settings.music_enabled:
 		$"../Music/SoundTrack".play()
 	
-	$"Sounds Button".pressed = settings.sounds_enabled
-	$"Music Button".pressed = settings.music_enabled
-	$"Shadows Button".pressed = settings.shadow_enabled
-	$"Culling Button".pressed = settings.culling_enabled
+	if settings.is_mobile:
+		$"Name Label".hide()
+		$Panel.rect_scale = Vector2(2, 2)
+	
+	$"Panel/Sounds Button".pressed = settings.sounds_enabled
+	$"Panel/Music Button".pressed = settings.music_enabled
+	$"Panel/Shadows Button".pressed = settings.shadow_enabled
+	$"Panel/Culling Button".pressed = settings.culling_enabled
 
 
 func _on_Back_Button_pressed():

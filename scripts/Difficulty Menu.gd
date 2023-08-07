@@ -2,6 +2,10 @@ extends Control
 
 func _ready():
 	Global.paused = false
+	if settings.is_mobile:
+		$"Name Label".rect_scale = Vector2(2.5, 2.5)
+		$"Name Label".rect_position.x = $"Name Label".rect_position.x/2
+		$"VBoxContainer".rect_scale = Vector2(2.5, 2.5)
 
 func _on_Easy_Button_pressed():
 	Global.difficulty = "Easy"
