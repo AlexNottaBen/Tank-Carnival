@@ -42,7 +42,7 @@ Follow [this link](http://docs.godotengine.org/en/latest/learning/workflow/expor
   - License: CC-0 (https://creativecommons.org/share-your-work/public-domain/cc0/)
 
 ### Music and Sound Effects:
-- "Vortex" Kevin MacLeod (http://incompetech.com)
+- "Vortex" Kevin MacLeod (https://incompetech.com)
   - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 - "QmYaan" Grand Beats (http://www.grandbeats.com/)
   - License: CC-BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/legalcode)
