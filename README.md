@@ -1,13 +1,17 @@
 # Tank Carnival
 Tank Carnival is a game where a player runs a tank and fights enemy tanks to win at every wave. The game is set in a 3D environment where the tanks move across space and shoot each other. The goal of the game is to destroy all enemy tanks before they destroy the player's tank.
 
+![Screenshot1](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcwOC5wbmc=/original/xGOpCm.png)
+![Screenshot2](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcwOS5wbmc=/original/vZwuWH.png)
+![Screenshot3](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcxMC5wbmc=/original/BunsdM.png)
+
 ## Open Source Engine
 The game is made using [Godot Engine 3.5.2 LTS](https://godotengine.org/). It may not work in 4.0+ and will not be ported anytime soon (if ever).
 
 ## Download
 ### Official builds:
 - GNU/Linux
-- Android
+- Android (In experimental mode)
 - Microsoft Windows
 
 ### Build from sources
