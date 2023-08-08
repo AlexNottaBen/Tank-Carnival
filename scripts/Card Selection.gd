@@ -13,7 +13,7 @@ var deck = [card_speed_scene, card_repair_scene, card_armor_scene, card_damage_s
 func _ready():
 	
 	if settings.is_mobile:
-		$"Text Label".rect_position.y += 65
+		$"Text Label".hide()
 	
 	randomize()
 	deck.shuffle()
