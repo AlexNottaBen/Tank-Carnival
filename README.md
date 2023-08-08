@@ -1,13 +1,19 @@
 # Tank Carnival
 Tank Carnival is a game where a player runs a tank and fights enemy tanks to win at every wave. The game is set in a 3D environment where the tanks move across space and shoot each other. The goal of the game is to destroy all enemy tanks before they destroy the player's tank.
 
+### [Get it in itch.io](https://alexnottaben.itch.io/tank-carnival)
+
+![Screenshot1](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcwOC5wbmc=/original/xGOpCm.png)
+![Screenshot2](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcwOS5wbmc=/original/vZwuWH.png)
+![Screenshot3](https://img.itch.zone/aW1hZ2UvMjIwOTcyNi8xMzA2NzcxMC5wbmc=/original/BunsdM.png)
+
 ## Open Source Engine
 The game is made using [Godot Engine 3.5.2 LTS](https://godotengine.org/). It may not work in 4.0+ and will not be ported anytime soon (if ever).
 
 ## Download
 ### Official builds:
 - GNU/Linux
-- Android
+- Android (In experimental mode)
 - Microsoft Windows
 
 ### Build from sources
@@ -38,11 +44,11 @@ Follow [this link](http://docs.godotengine.org/en/latest/learning/workflow/expor
   - License: CC-0 (https://creativecommons.org/share-your-work/public-domain/cc0/)
 
 ### Music and Sound Effects:
-- "Vortex" Kevin MacLeod (http://incompetech.com)
+- "Vortex" Kevin MacLeod (https://incompetech.com)
   - License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 - "QmYaan" Grand Beats (http://www.grandbeats.com/)
   - License: CC-BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/legalcode)
-- Sound Effects: freesound.org
+- Sound Effects: [freesound.org](https://freesound.org)
   - License: CC-0 (https://creativecommons.org/share-your-work/public-domain/cc0/)
 - "Hitting a tin can" ryanconway (https://freesound.org/people/ryanconway/)
   - License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
