@@ -1,3 +1,13 @@
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
+
 extends Control
 
 const card_speed_scene = preload("res://scenes/Card Speed.tscn")
@@ -11,10 +21,10 @@ const card_rocket_scene = preload("res://scenes/Card Rocket.tscn")
 var deck = [card_speed_scene, card_repair_scene, card_armor_scene, card_damage_scene, card_reload_scene, card_gun_scene, card_rocket_scene]
 
 func _ready():
-	
+
 	if settings.is_mobile:
 		$"Text Label".hide()
-	
+
 	randomize()
 	deck.shuffle()
 	var number_of_guns = get_node("../Player").number_of_guns

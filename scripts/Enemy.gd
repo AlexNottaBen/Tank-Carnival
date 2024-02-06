@@ -1,3 +1,13 @@
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
+
 extends KinematicBody
 
 # Declare member variables here.
@@ -65,36 +75,36 @@ func _ready():
 func _physics_process(delta):
 	var position = get_global_transform().origin
 	var Velocity = Vector3()
-	
+
 	reload()
-	
+
 	# print(position)
-	
+
 	if direction == "Up":
 		if position.z > -clamp_radius:
 			Velocity.z = -1 * speed
 			$CollisionShape.rotation_degrees = Vector3(0,0,0)
-		
+
 	elif direction == "Down":
 		if position.z < clamp_radius:
-			Velocity.z = 1 * speed	
+			Velocity.z = 1 * speed
 			$CollisionShape.rotation_degrees = Vector3(0,-180,0)
-		
+
 	elif direction == "Left":
 		if position.x > -clamp_radius:
 			Velocity.x = -1 * speed
 			$CollisionShape.rotation_degrees = Vector3(0,90,0)
-		
+
 	elif direction == "Right":
 		if position.x < clamp_radius:
 			Velocity.x = 1 * speed
 			$CollisionShape.rotation_degrees = Vector3(0,-90,0)
-	
+
 	if not Global.paused:
 		Velocity.y = -9.8
-		
+
 		Velocity = move_and_slide(Velocity, Vector3.UP)
-	
+
 		if reload_time == 0:
 			fire()
 
@@ -105,4 +115,3 @@ func _on_DirectionTimer_timeout():
 	var directions = ["Up","Down","Left","Right"]
 	if not Global.paused:
 		direction = choose_random(directions)
-

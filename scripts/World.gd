@@ -1,3 +1,13 @@
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
+
 extends Spatial
 
 export var number_of_bodies = 250
@@ -16,11 +26,11 @@ func _ready():
 		if randomize_gen == 1 or randomize_gen == 2:
 			new_body = bush_scene.instance()
 		$Level.add_child(new_body)
-		
+
 		var posX = rand_range(-spawn_area_size.x/2, spawn_area_size.x/2)
 		var posY = 0
 		var posZ = rand_range(-spawn_area_size.z/2, spawn_area_size.z/2)
-		
+
 		new_body.translation = Vector3(posX, posY, posZ)
 		new_body.rotate_y(rand_range(-180,180))
 

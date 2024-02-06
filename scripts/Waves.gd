@@ -1,3 +1,13 @@
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
+
 extends Spatial
 
 export var number_of_enemies = 5
@@ -22,7 +32,7 @@ func _ready():
 		randomize()
 		var new_body = enemy_scene.instance()
 		var choose_type = round(rand_range(0, 5))
-		
+
 		if choose_type==1:
 			new_body = enemy2_scene.instance()
 		elif choose_type==2:
@@ -36,7 +46,7 @@ func _ready():
 		elif choose_type==5 and not is_enemy6_spawned:
 			new_body = enemy6_scene.instance()
 			is_enemy6_spawned = true
-		
+
 		elif choose_type==3:
 			new_body = enemy_scene.instance()
 		elif choose_type==4:
@@ -44,13 +54,13 @@ func _ready():
 		elif choose_type==5:
 			new_body = enemy3_scene.instance()
 		add_child(new_body)
-		
+
 		print(is_enemy4_spawned,is_enemy5_spawned,is_enemy6_spawned)
-		
+
 		var posX = 0.0
 		var posY = 1.0
 		var posZ = 0.0
-		
+
 		var side = round(rand_range(0, 3))
 		var edge_position = rand_range(-square_size/2, square_size/2)
 		# print("side",side)
@@ -67,7 +77,7 @@ func _ready():
 		elif side==3:
 			posX = square_size/2
 			posZ = edge_position
-		
+
 		new_body.translation = Vector3(posX, posY, posZ)
 		print(choose_type)
 		enemies += 1

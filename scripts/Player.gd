@@ -1,3 +1,13 @@
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
+
 extends KinematicBody
 
 # Medium
@@ -34,7 +44,7 @@ func _ready():
 		max_reload_time = 45
 		damage = 100
 		max_durability = 500
-		
+
 	durability = max_durability
 
 func destroy():
@@ -94,9 +104,9 @@ func fire():
 
 func rocket_fire():
 	rocket_reload_time = max_reload_time
-	
+
 	rocket_damage = 200 + damage
-	
+
 	var firepoints = {
 		"Firepoint1": $CollisionShape/RocketLauncher/Firepoint,
 		"Firepoint2": $CollisionShape/RocketLauncher/Firepoint2,
@@ -130,7 +140,7 @@ func _process(delta):
 	var position = get_global_transform().origin
 	var Velocity = Vector3()
 	# print(position)
-	
+
 	if Input.is_action_pressed("Up") and not Global.paused and is_playng:
 		if position.z > -clamp_radius:
 			Velocity.z = -1 * speed
@@ -151,26 +161,26 @@ func _process(delta):
 			Velocity.x = 1 * speed
 		direction = "Right"
 		$CollisionShape.rotation_degrees = Vector3(0,-90,0)
-	
+
 	if is_playng and not Global.paused:
-		
+
 		if number_of_guns > 1:
 			$"CollisionShape/Right Gun".visible = true
 		if number_of_guns > 2:
 			$"CollisionShape/Left Gun".visible = true
-			
+
 		if number_of_rockets > 0:
 			$CollisionShape/RocketLauncher.visible = true
 		if number_of_rockets > 4:
 			$CollisionShape/RocketLauncher2.visible = true
-			
+
 		if Input.is_action_pressed("Enter"):
 			durability = 0
 			destroy()
 
 		Velocity.y = -9.8
 		move_and_slide(Velocity, Vector3.UP)
-		
+
 func _physics_process(delta):
 		if is_playng and not Global.paused:
 			reload(delta)

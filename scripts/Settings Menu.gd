@@ -1,14 +1,23 @@
-extends Control
+# Copyright (c) 2024 AlexNottaBen
+#
+# This software product is licensed under the terms of
+# GNU General Public License version 3 (GPLv3) or any newer version.
+# Please check the LICENSE file in the project root directory
+# to obtain the full text of the license.
+#
+# WARNING: This software product is provided without any warranty.
+# See the LICENSE file for details.
 
+extends Control
 
 func _ready():
 	if settings.music_enabled:
 		$"../Music/SoundTrack".play()
-	
+
 	if settings.is_mobile:
 		$"Name Label".hide()
 		$Panel.rect_scale = Vector2(2, 2)
-	
+
 	$"Panel/Sounds Button".pressed = settings.sounds_enabled
 	$"Panel/Music Button".pressed = settings.music_enabled
 	$"Panel/Shadows Button".pressed = settings.shadow_enabled
